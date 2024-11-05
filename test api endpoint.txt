@@ -1,0 +1,5 @@
+Testing the Endpoints
+POST /api/users/register - Register a new user.
+GET /api/users/profile - Get the authenticated user profile (token required).
+PUT /api/users/update - Update user information (token required).
+DELETE /api/users/delete - Delete user (token required).

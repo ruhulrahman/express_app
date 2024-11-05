@@ -1,0 +1,14 @@
+express_app
+├── config
+│   └── db.js                 # Database configuration
+├── controllers
+│   └── userController.js     # Controller for user actions
+├── middlewares
+│   └── authMiddleware.js     # Authentication middleware
+├── models
+│   └── User.js               # User model
+├── routes
+│   └── userRoutes.js         # Routes for user actions
+├── .env                      # Environment variables
+├── server.js                 # Main server file
+└── package.json
