@@ -1,2 +1,3 @@
 npm install express mongoose bcryptjs jsonwebtoken dotenv
 npm install --save-dev nodemon
+openssl req -nodes -new -x509 -keyout server.key -out server.cert
