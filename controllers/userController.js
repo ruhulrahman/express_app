@@ -1,22 +1,32 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+// const { registerUserValidation } = require('../validations/userJoiValidation');
+const { registerUserValidation } = require('../validations/userYupValidation');
+const { getErrorDetails } = require('../utils/util');
 
 exports.registerUser = async (req, res) => {
   const { name, email, password } = req.body;
+
+  // Validate user input
+  // const { error } = registerUserValidation(req.body); // joi validation
+  await registerUserValidation.validate(req.body, { abortEarly: false });
+
   try {
     let user = await User.findOne({ email });
-    if (user) return res.status(400).json({ msg: 'User already exists' });
+    if (user) return res.status(400).json({ errors: { email: 'User already exists' } });
 
-    user = new User({ name, email, password: await bcrypt.hash(password, 10) });
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    user = new User({ name, email, password: hashedPassword, age, isAdmin });
     await user.save();
 
     const payload = { user: { id: user.id } };
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-    res.json({ token });
+    res.status(201).json({ token });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    getErrorDetails(error, res)
   }
 };
 
