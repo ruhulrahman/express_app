@@ -2,6 +2,9 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
+const countryRoutes = require('./routes/countryRoutes');
+const designationRoutes = require('./routes/designationRoutes');
+const bloodGroupRoutes = require('./routes/bloodGroupRoutes');
 const https = require('https');
 const fs = require('fs');
 
@@ -25,6 +28,9 @@ app.use(express.json());
 
 // Routes
 app.use('/api/users', userRoutes);
+app.use('/api/countries', countryRoutes);
+app.use('/api/designations', designationRoutes);
+app.use('/api/bloodgroups', bloodGroupRoutes);
 
 // Port configuration
 const PORT = process.env.PORT || 4000;
