@@ -14,6 +14,11 @@ router.post('/logout', authMiddleware, userController.logoutUser);
 // Get All Users (Protected)
 router.get('/', authMiddleware, userController.getAllUsers);
 
+router.get('/get-top-10-users', authMiddleware, userController.getTop10Users);
+
+router.get('/top-10-user-order-by-created-at', authMiddleware, userController.getTop10UsersOrderByCreatedAt);
+
+
 router.get('/details', authMiddleware, userController.getUserWithDetails);
 
 router.get('/:id', authMiddleware, userController.getUserById);

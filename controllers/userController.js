@@ -78,6 +78,24 @@ exports.getAllUsers = async (req, res) => {
   }
 };
 
+exports.getTop10Users = async (req, res) => {
+  try {
+    const users = await User.find().sort('name').limit(10).select('-password');
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+exports.getTop10UsersOrderByCreatedAt = async (req, res) => {
+  try {
+    const users = await User.find().sort('-createdAt').limit(10).select('-password');
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
 exports.getAllAdminUsers = async (req, res) => {
   try {
     const users = await User.find({ isAdmin: true }).select('-password');
