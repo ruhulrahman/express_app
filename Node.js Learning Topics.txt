@@ -1,0 +1,11 @@
+1. Have you worked with Docker to containerize applications, ensuring consistent environments for Node.js or Vue.js projects?Have you worked with Docker to containerize applications, ensuring consistent environments for Node.js or Vue.js projects? 
+2. On a scale from 1 to 10, how confident are you in troubleshooting and optimizing cloud-based deployments (e.g., AWS, Azure, Google Cloud) for production environments?
+3. Have you used callbacks, Promises, or async/await to handle asynchronous operations in Node.js applications?Have you used callbacks, Promises, or async/await to handle asynchronous operations in Node.js applications? 
+4. On a scale from 1 to 10, how comfortable are you with implementing asynchronous patterns (e.g., Promises, async/await) in Node.js?
+5. Have you implemented JWT (JSON Web Tokens) or OAuth-based authentication in a Node.js application?Have you implemented JWT (JSON Web Tokens) or OAuth-based authentication in a Node.js application? 
+6. On a scale from 1 to 10, how experienced are you in handling large file uploads efficiently in Node.js applications?
+7. Have you implemented rate-limiting and security measures (e.g., protection against DDoS attacks) in a Node.js API?Have you implemented rate-limiting and security measures (e.g., protection against DDoS attacks) in a Node.js API? 
+8. Do you have experience using ORMs like Sequelize or TypeORM to manage database relationships and migrations in Node.js?Do you have experience using ORMs like Sequelize or TypeORM to manage database relationships and migrations in Node.js? 
+9. On a scale from 1 to 10, how confident are you in writing unit tests for Node.js applications using Mocha, Jest, or similar frameworks?
+10. Have you worked with Node.js’s event loop and non-blocking I/O model in production applications?Have you worked with Node.js’s event loop and non-blocking I/O model in production applications? 
+11. On a scale from 1 to 10, how confident are you in testing Vue.js components using frameworks like Jest or Vue Test Utils?

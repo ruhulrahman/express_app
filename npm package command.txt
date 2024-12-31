@@ -23,3 +23,19 @@ npm install express-brute
 //Monitor and Block Malicious IPs
 npm install express-ipfilter
 
+
+//Using ORMs like Sequelize or TypeORM to manage database relationships and migrations
+npm install sequelize sequelize-cli pg pg-hstore
+npx sequelize-cli init
+
+//folder structure
+├── models
+├── migrations
+├── seeders
+└── config
+
+//Create models:
+npx sequelize-cli model:generate --name User --attributes name:string,email:string
+npx sequelize-cli model:generate --name Post --attributes title:string,content:text,userId:integer
+
+
