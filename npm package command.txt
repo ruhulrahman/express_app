@@ -38,4 +38,11 @@ npx sequelize-cli init
 npx sequelize-cli model:generate --name User --attributes name:string,email:string
 npx sequelize-cli model:generate --name Post --attributes title:string,content:text,userId:integer
 
+//Run migrations:
+npx sequelize-cli db:migrate
+
+//Using TypeORM
+npm install typeorm reflect-metadata pg
+
+
 
