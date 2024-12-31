@@ -1,3 +1,25 @@
-npm install express mongoose bcryptjs jsonwebtoken dotenv
+npm install express mongoose bcryptjs jsonwebtoken dotenv body-parser
 npm install --save-dev nodemon
 openssl req -nodes -new -x509 -keyout server.key -out server.cert
+
+//OAuth Authentication
+npm install express passport passport-google-oauth20 express-session
+
+//Rate-Limiting
+npm install express-rate-limit
+
+//Protect Against DDoS Attacks
+npm install express-slow-down
+
+//Security Headers
+npm install helmet
+
+//Input Validation
+npm install express-validator
+
+//Secure Against Brute Force Attacks
+npm install express-brute
+
+//Monitor and Block Malicious IPs
+npm install express-ipfilter
+
