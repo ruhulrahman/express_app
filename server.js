@@ -4,6 +4,7 @@ const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const https = require('https');
 const fs = require('fs');
+const path = require('path');
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const slowDown = require('express-slow-down');
@@ -82,6 +83,24 @@ app.use('/api/users', userRoutes);
 const PORT = process.env.PORT || 4000;
 // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 // Start the HTTPS server
+
+// const server = https.createServer((req, res) => {
+//     const filePath = path.join(__dirname, 'large-file.txt');
+
+//     fs.createReadStream(filePath) // Non-blocking file read
+//         .on('open', () => {
+//             res.writeHead(200, { 'Content-Type': 'text/plain' });
+//         })
+//         .on('error', (err) => {
+//             res.writeHead(500);
+//             res.end('Error reading file');
+//         })
+//         .pipe(res); // Stream data directly to the response
+// });
+
+// server.listen(PORT, () => {
+//     console.log(`HTTP Server is running on http://localhost:${PORT}`);
+// });
 https.createServer(sslOptions, app).listen(PORT, () => {
     console.log(`HTTPS Server is running on https://localhost:${PORT}`);
 });
